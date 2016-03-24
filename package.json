@@ -1,5 +1,5 @@
 {
-  "name": "angular2-skeleton-app",
+  "name": "music_store",
   "version": "1.0.0",
   "scripts": {
     "start": "npm run tsc:w",
@@ -37,5 +37,13 @@
   },
   "main": "index.js",
   "author": "",
-  "description": ""
+  "description": "#### _A simple template, 3.__.2016_",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsween/angular2_template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsween/angular2_template/issues"
+  },
+  "homepage": "https://github.com/jsween/angular2_template#readme"
 }

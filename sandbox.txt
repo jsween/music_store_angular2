@@ -1,0 +1,5 @@
+<select (change)="onChange($event.target.value)" class="filter">
+  <option value="all" selected="selected">Show All</option>
+  <option value="Pop">Pop</option>
+  <option value="Rock">Rock</option>
+</select>
