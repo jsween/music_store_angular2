@@ -9,6 +9,7 @@ import { ArtistPipe } from './artist.pipe';
 @Component({
 selector: 'album-list',
 inputs: ['albumList'],
+outputs: ['onAlbumSelect'],
 directives: [AlbumComponent],
 pipes: [GenrePipe, ArtistPipe],
 template: `
@@ -23,8 +24,8 @@ template: `
   <option value="AC/DC">AC/DC</option>
   <option value="Pink Floyd">Pink Floyd</option>
 </select>
-<album-display *ngFor="#album of albumList | genre:filterGenre | artist:filterArtist"
-  [album]="album">
+<album-display *ngFor="#album of albumList |  artist:filterArtist:filterGenre | genre:filterGenre:filterArtist"
+  [album]="album"  (click)="albumSelected(album)">
 </album-display>
 `
 })
@@ -33,10 +34,18 @@ export class AlbumListComponent {
   public albumList: Album[];
   public filterGenre: string = "all";
   public filterArtist: string = "all";
+  public onAlbumSelect: EventEmitter<Album>;
+  constructor() {
+    this.onAlbumSelect = new EventEmitter();
+  }
   onGenreChange(filterOption) {
     this.filterGenre = filterOption;
   }
   onArtistChange(filterOption) {
-    this.filterGenre = filterOption;
+    this.filterArtist = filterOption;
+  }
+  albumSelected(selectedAlbum: Album): void {
+    this.onAlbumSelect.emit(selectedAlbum);
+    alert("Howdy");
   }
 }
