@@ -1,4 +1,4 @@
-# _Project Title_
+# _Music Store_
 
 #### _A simple web app for a music store, 3.24.2016_
 
