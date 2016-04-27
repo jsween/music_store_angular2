@@ -1,16 +1,12 @@
 # _Project Title_
 
-#### _A simple template, 3.__.2016_
+#### _A simple web app for a music store, 3.24.2016_
 
 ### By _**Jon Sweeney and **_
 
 ## Description
 
-_This web app is designed to ._
-
-_The goal of this project is to ._
-
-_The project was put together using ._
+This is a practical exercise to build a music store.
 
 
 ## Setup/Installation
